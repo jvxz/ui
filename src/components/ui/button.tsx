@@ -1,48 +1,50 @@
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
+import type { VariantProps } from 'class-variance-authority'
+import { cn } from '@/lib/utils'
+import { Slot } from '@radix-ui/react-slot'
+import { cva } from 'class-variance-authority'
+import { forwardRef } from 'react'
 
 const buttonVariants = cva(
-  "grid place-items-center shadow-lg cursor-pointer",
+  'flex justify-center items-center gap-2 disabled:opacity-50 rounded font-extralight transition-all duration-100 cursor-pointer disabled:cursor-not-allowed',
   {
     variants: {
       variant: {
         default:
-          "rounded-sm font-extralight border bg-secondary active:border-secondary-foreground/10 active:bg-secondary/80 hover:border-secondary-foreground/20 transition-all duration-100 text-secondary-foreground",
+          'border bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          'bg-destructive text-destructive-foreground hover:bg-destructive/90 not-disabled:active:bg-destructive/80 ',
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          'border border-input bg-background hover:bg-accent/50 hover:border-accent-foreground/10 not-disabled:active:bg-accent/40 hover:text-accent-foreground',
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          'bg-secondary text-secondary-foreground  hover:bg-secondary/80',
+        ghost: 'hover:bg-accent/50 hover:text-accent-foreground not-disabled:active:bg-accent/40',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: "px-3 py-1 text-sm",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: 'shadow-lg px-3 py-1 text-sm',
+        sm: 'shadow-lg px-2 py-[2px] text-xs',
+        lg: 'shadow-lg h-10 px-8 font-medium text-lg',
+        icon: 'h-9 w-9',
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: 'default',
+      size: 'default',
     },
-  }
+  },
 )
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  isLoading?: boolean
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
+    const Comp = asChild ? Slot : 'button'
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
@@ -50,8 +52,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     )
-  }
+  },
 )
-Button.displayName = "Button"
+Button.displayName = 'Button'
 
 export { Button, buttonVariants }
