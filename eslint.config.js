@@ -47,7 +47,6 @@ export default [
       "@eslint-react/hooks-extra/no-unnecessary-use-memo": "warn",
       "@eslint-react/dom/no-unknown-property": ["error", { requireDataLowercase: true }],
 
-
       '@stylistic/indent': ['error', 2],
       '@stylistic/jsx-closing-bracket-location': [1, 'line-aligned'],
       '@stylistic/jsx-closing-tag-location': [1, 'line-aligned'],
