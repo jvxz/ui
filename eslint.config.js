@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import stylistic from '@stylistic/eslint-plugin';
 // @ts-ignore
 import importPlugin from 'eslint-plugin-import';
+import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 
 export default [
   {
@@ -26,6 +27,7 @@ export default [
       stylistic.configs.recommended,
       importPlugin.flatConfigs.recommended,
       importPlugin.flatConfigs.typescript,
+      jsxA11yPlugin.flatConfigs.strict
     ],
     languageOptions: {
       parser: tseslint.parser,
@@ -43,9 +45,11 @@ export default [
       "@eslint-react/no-useless-fragment": "warn",
       "@eslint-react/hooks-extra/no-unnecessary-use-callback": "warn",
       "@eslint-react/hooks-extra/no-unnecessary-use-memo": "warn",
+      "@eslint-react/dom/no-unknown-property": ["error", { requireDataLowercase: true }],
+
 
       '@stylistic/indent': ['error', 2],
-      '@stylistic/jsx-closing-bracket-location': [1, 'props-aligned'],
+      '@stylistic/jsx-closing-bracket-location': [1, 'line-aligned'],
       '@stylistic/jsx-closing-tag-location': [1, 'line-aligned'],
       "@stylistic/jsx-one-expression-per-line": ["error", { "allow": "non-jsx" }],
       '@stylistic/no-multiple-empty-lines': ['error', { 'max': 1, 'maxBOF': 0 }],
