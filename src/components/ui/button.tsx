@@ -1,5 +1,5 @@
-import type { VariantProps } from 'class-variance-authority'
 import { Slot } from '@radix-ui/react-slot'
+import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 import { forwardRef } from 'react'
 
@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-         'border bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
+         'border border-input bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
         destructive:
          'bg-destructive text-destructive-foreground hover:bg-destructive/80 not-disabled:active:bg-destructive/80 ',
         outline:
@@ -22,9 +22,9 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'shadow-lg px-3 py-1 h-8',
-        sm: 'shadow-lg px-2 py-[2px] text-sm',
-        lg: 'shadow-lg h-10 px-8 font-medium text-lg',
+        default: 'shadow px-3 py-1 h-8',
+        sm: 'shadow px-2 py-[2px] text-sm',
+        lg: 'shadow h-10 px-8 font-medium text-lg',
         icon: 'h-8 w-8',
       },
     },
