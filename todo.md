@@ -8,7 +8,7 @@
 - [x] Switch
 - [x] Table
 - [x] Alert
-- [ ] Avatar
+- [x] Avatar
 - [ ] Badge
 - [ ] Breadcrumb
 - [ ] Calendar
