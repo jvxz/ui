@@ -1,9 +1,19 @@
 @import 'tailwindcss';
+@plugin 'tailwindcss-animate';
 
+@custom-variant dark (&:is(.dark *));
 @theme {
   --font-sans:
     var(--font-sans), ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --text-xs: calc(var(--text-base) * 0.75);
+  --text-sm: calc(var(--text-base) * 0.875);
+  --text-base: 0.9rem;
+  --text-md: calc(var(--text-base) * 1.2);
+  --text-lg: calc(var(--text-base) * 1.35);
+
+  --radius: 0.9rem;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -21,6 +31,8 @@
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
   --color-ring: hsl(var(--ring));
 }
 
@@ -67,7 +79,7 @@
     --secondary-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    --ring: 216 34% 17%;
+    --ring: 218 32% 24%;
   }
 }
 
@@ -82,7 +94,7 @@
   }
 
   * {
-    @apply border-border
+    @apply border-border ring-ring text-base
   }
 
   body {
