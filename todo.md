@@ -7,8 +7,7 @@
 - [x] Modal
 - [x] Switch
 - [x] Table
-- [ ] Alert
-- [ ] Aspect Ratio
+- [x] Alert
 - [ ] Avatar
 - [ ] Badge
 - [ ] Breadcrumb
