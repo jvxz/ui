@@ -6,13 +6,13 @@ import { HTMLAttributes } from 'react'
 import { Button } from './button'
 import { cn } from '@/lib/utils'
 
-const contentClass = cva('z-50 fixed inset-0 bg-card m-auto motion-preset-slide-up-sm p-5 border rounded w-[90vw] max-w-[500px] h-fit max-h-[85vh] motion-duration-125 motion-ease-out motion-preset-fade')
+const contentClass = cva('z-50 fixed inset-0 bg-card m-auto motion-preset-slide-up-sm p-5 border rounded w-[90vw] max-w-[500px] h-fit max-h-[85vh] text-muted-foreground motion-duration-125 motion-ease-out motion-preset-fade')
 function Content({ className, children, ref, closeBtn = true, ...props }: ModalPrimitive.AlertDialogContentProps & { ref?: React.Ref<HTMLDivElement>, closeBtn?: boolean }) {
   return (
     <ModalPrimitive.Portal>
       <ModalPrimitive.Action>
         <ModalPrimitive.Overlay
-          className="fixed inset-0 bg-black/40 motion-duration-125 motion-ease-out motion-preset-fade"
+          className="fixed inset-0 bg-black/40 backdrop-blur-[3px] motion-duration-125 motion-ease-out motion-preset-fade"
         />
       </ModalPrimitive.Action>
       <ModalPrimitive.Content
@@ -26,7 +26,7 @@ function Content({ className, children, ref, closeBtn = true, ...props }: ModalP
             <Button
               variant="ghost"
               size="icon"
-              className="top-3 right-3 absolute rounded-full"
+              className="top-3 right-3 absolute rounded-full size-5"
               >
               <Icon icon="ph:x" />
             </Button>
@@ -59,7 +59,7 @@ function Description({ className, ref, ...props }: ModalPrimitive.AlertDialogDes
   )
 }
 
-const headerClass = cva('mb-6')
+const headerClass = cva('mb-4 text-foreground')
 function Header({ className, ref, ...props }: HTMLAttributes<HTMLElement> & { ref?: React.Ref<HTMLDivElement> }) {
   return (
     <div
@@ -70,7 +70,7 @@ function Header({ className, ref, ...props }: HTMLAttributes<HTMLElement> & { re
   )
 }
 
-const footerClass = cva('flex justify-end gap-2 mt-6')
+const footerClass = cva('flex justify-end gap-2 mt-4')
 function Footer({ className, ref, ...props }: HTMLAttributes<HTMLElement> & { ref?: React.Ref<HTMLDivElement> }) {
   return (
     <div
