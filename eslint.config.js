@@ -49,9 +49,10 @@ export default [
       '@stylistic/jsx-closing-tag-location': [1, 'line-aligned'],
       "@stylistic/jsx-one-expression-per-line": ["error", { "allow": "non-jsx" }],
       '@stylistic/no-multiple-empty-lines': ['error', { 'max': 1, 'maxBOF': 0 }],
+      "@stylistic/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "always" }],
+
 
       '@stylistic/space-in-parens': ['error', 'never'],
-
 
       'import/newline-after-import': 'error',
       'import/no-unresolved': 'off',
@@ -59,7 +60,8 @@ export default [
         groups: ['builtin', 'external', 'internal'],
         'newlines-between': 'always',
         alphabetize: {
-          
+          order: 'asc',
+          caseInsensitive: true,
         }
       }],
     },
