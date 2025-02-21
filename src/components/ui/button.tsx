@@ -6,7 +6,7 @@ import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'flex justify-center items-center gap-2 disabled:opacity-50 rounded outline-0 focus:ring ring-ring font-extralight transition-all duration-100 cursor-pointer disabled:cursor-not-allowed select-none',
+  'flex justify-center items-center gap-2 disabled:opacity-50 rounded outline-0 focus:ring-2 font-extralight transition-all duration-100 cursor-pointer disabled:cursor-not-allowed select-none',
   {
     variants: {
       variant: {
