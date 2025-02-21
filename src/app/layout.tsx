@@ -1,8 +1,9 @@
-import { Providers } from '@/components/providers'
-import '@/styles/globals.css'
-
 import { type Metadata } from 'next'
 import { IBM_Plex_Sans } from 'next/font/google'
+
+import { Providers } from '@/components/providers'
+import '@/styles/globals.css'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export const metadata: Metadata = {
   title: 'ui-kit',
@@ -21,7 +22,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${font.variable}`}>
-      <Providers><body>{children}</body></Providers>
+      <Providers>
+        <body>
+          <div className="top-4 right-4 fixed">
+            <ThemeToggle />
+          </div>
+          {children}
+        </body>
+      </Providers>
     </html>
   )
 }
