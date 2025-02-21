@@ -48,6 +48,7 @@ export default [
       '@stylistic/jsx-closing-bracket-location': [1, 'props-aligned'],
       '@stylistic/jsx-closing-tag-location': [1, 'line-aligned'],
       "@stylistic/jsx-one-expression-per-line": ["error", { "allow": "non-jsx" }],
+      '@stylistic/no-multiple-empty-lines': ['error', { 'max': 1, 'maxBOF': 0 }],
 
       '@stylistic/space-in-parens': ['error', 'never'],
 
