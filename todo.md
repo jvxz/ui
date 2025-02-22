@@ -9,7 +9,7 @@
 - [x] Table
 - [x] Alert
 - [x] Avatar
-- [ ] Badge
+- [x] Badge
 - [ ] Breadcrumb
 - [ ] Calendar
 - [ ] Carousel
