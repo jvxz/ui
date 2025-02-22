@@ -11,20 +11,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-         'border border-input bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
+         'border shadow border-input bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
         destructive:
-         'bg-destructive text-destructive-foreground hover:bg-destructive/80 not-disabled:active:bg-destructive/80 ',
+         'bg-destructive shadow text-destructive-foreground hover:bg-destructive/80 not-disabled:active:bg-destructive/80 ',
         outline:
-         'border border-input bg-background hover:bg-accent/50 hover:border-accent-foreground/10 not-disabled:active:bg-accent/40 hover:text-accent-foreground',
+         'border shadow border-input bg-background hover:bg-accent/50 hover:border-accent-foreground/10 not-disabled:active:bg-accent/40 hover:text-accent-foreground',
         secondary:
-          'bg-secondary text-secondary-foreground  hover:bg-secondary/80',
+          'bg-secondary shadow text-secondary-foreground  hover:bg-secondary/80',
         ghost: 'hover:bg-accent/50 hover:text-accent-foreground not-disabled:active:bg-accent/40',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'shadow px-3 py-1 h-8',
-        sm: 'shadow px-2 py-[2px] text-sm',
-        lg: 'shadow h-10 px-8 font-medium text-lg',
+        default: ' px-3 py-1 h-8',
+        sm: ' px-2 py-[2px] text-sm',
+        lg: ' h-10 px-8 font-medium text-lg',
         icon: 'h-8 w-8',
       },
     },
@@ -48,7 +48,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({
+          variant,
+          size,
+          className,
+        }))}
         ref={ref}
         {...props}
       />
