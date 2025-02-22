@@ -12,7 +12,7 @@
 - [x] Badge
 - [x] Breadcrumb
 - [ ] Calendar
-- [ ] Carousel
+- [x] Carousel (needs work)
 - [ ] Chart
 - [ ] Collapsible
 - [ ] Combobox
