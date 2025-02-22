@@ -14,7 +14,7 @@
 - [ ] Calendar
 - [x] Carousel (needs work)
 - [ ] Chart
-- [ ] Collapsible
+- [x] Collapsible
 - [ ] Combobox
 - [ ] Command
 - [ ] Context Menu
@@ -40,7 +40,7 @@
 - [ ] Skeleton
 - [ ] Slider
 - [ ] Sonner
-- [ ] Tabs
+- [x] Tabs
 - [ ] Textarea
 - [ ] Toast
 - [ ] Toggle
