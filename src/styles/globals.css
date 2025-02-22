@@ -1,20 +1,23 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin 'tailwindcss-radix';
 @plugin 'tailwindcss-motion';
 
 @custom-variant dark (&:is(.dark *));
 @theme {
   --font-sans:
-    var(--font-sans), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --text-xs: calc(var(--text-base) * 0.75);
   --text-sm: calc(var(--text-base) * 0.875);
-  --text-base: 0.9rem;
+  --text-base: 0.94rem;
   --text-md: calc(var(--text-base) * 1.2);
   --text-lg: calc(var(--text-base) * 1.35);
+  --text-xl: calc(var(--text-base) * 1.75);
+  --text-2xl: calc(var(--text-base) * 2);
+  --text-3xl: calc(var(--text-base) * 2.5);
 
-  --radius: 0.9rem;
+  --radius: 0.5rem;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -58,13 +61,12 @@
     --destructive: 0 90% 60%;
     --destructive-foreground: 260 25% 96%;
     --ring: 260 25% 70%;
-    --radius: 0.5rem;
   }
 
   .dark {
     --background: 260 30% 5%;
     --foreground: 260 15% 95%;
-    --muted: 260 25% 8%;
+    --muted: 260 25% 12%;
     --muted-foreground: 260 15% 70%;
     --accent: 260 25% 12%;
     --accent-foreground: 260 25% 98%;
@@ -85,7 +87,6 @@
 }
 
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -95,10 +96,40 @@
   }
 
   * {
-    @apply border-border ring-ring text-base
+    @apply border-border ring-ring text-base shrink-0 underline-offset-4;
   }
 
   body {
-    @apply bg-background text-foreground duration-100
+    @apply bg-background text-foreground duration-100;
+  }
+}
+
+@layer utilities {
+  .accordion-content {
+    overflow: hidden;
+  }
+  .accordion-content[data-state="open"] {
+    animation: slideDown 100ms ease-out;
+  }
+  .accordion-content[data-state="closed"] {
+    animation: slideUp 100ms ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 }
