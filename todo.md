@@ -10,7 +10,7 @@
 - [x] Alert
 - [x] Avatar
 - [x] Badge
-- [ ] Breadcrumb
+- [x] Breadcrumb
 - [ ] Calendar
 - [ ] Carousel
 - [ ] Chart
