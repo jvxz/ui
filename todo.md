@@ -37,7 +37,7 @@
 - [ ] Separator
 - [ ] Sheet
 - [ ] Sidebar
-- [ ] Skeleton
+- [x] Skeleton
 - [ ] Slider
 - [ ] Sonner
 - [x] Tabs
