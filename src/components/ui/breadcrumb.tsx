@@ -27,8 +27,8 @@ function Item({ className, disabled, ...props }: {
 function Separator() {
   return (
     <Icon
-      icon="ph:caret-right-bold"
-      className="text-muted-foreground"
+      icon="ph:caret-right"
+      className="text-muted-foreground/50"
     />
   )
 }

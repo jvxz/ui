@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
 
-const badgeVariants = cva('flex justify-center items-center px-2 py-0.5 rounded-lg font-medium text-sm transition-all duration-100 select-none', {
+const badgeVariants = cva('flex justify-center items-center px-2 py-0.5 rounded-lg w-fit font-medium text-sm transition-all duration-100 select-none', {
   variants: {
     variant: {
       default: 'bg-secondary/50 hover:bg-secondary border',

@@ -6,19 +6,17 @@ import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'flex justify-center items-center gap-2 disabled:opacity-50 rounded outline-0 focus:ring-2 font-extralight transition-all duration-100 cursor-pointer disabled:cursor-not-allowed select-none',
+  'flex justify-center items-center gap-2 disabled:opacity-50 rounded outline-0 focus-visible:ring-2 font-extralight transition-all duration-100 cursor-pointer disabled:cursor-not-allowed select-none',
   {
     variants: {
       variant: {
         default:
-         'border shadow border-input bg-secondary/80 hover:bg-secondary not-disabled:active:border-secondary-foreground/10 not-disabled:active:bg-secondary/80 not-disabled:hover:border-secondary-foreground/20 text-secondary-foreground ',
+         'border shadow border-input bg-secondary hover:bg-muted not-disabled:active:border-input not-disabled:active:bg-muted/70 not-disabled:hover:border-ring/50 text-secondary-foreground ',
         destructive:
-         'bg-destructive shadow text-destructive-foreground hover:bg-destructive/80 not-disabled:active:bg-destructive/80 ',
+         'bg-destructive shadow text-destructive-foreground hover:bg-destructive not-disabled:active:bg-destructive ',
         outline:
-         'border shadow border-input bg-background hover:bg-accent/50 hover:border-accent-foreground/10 not-disabled:active:bg-accent/40 hover:text-accent-foreground',
-        secondary:
-          'bg-secondary shadow text-secondary-foreground  hover:bg-secondary/80',
-        ghost: 'hover:bg-accent/50 hover:text-accent-foreground not-disabled:active:bg-accent/40',
+         'border  shadow border-input/70 bg-transparent hover:bg-accent/10 not-disabled:active:bg-transparent hover:text-accent-foreground',
+        ghost: 'hover:bg-accent/50 bg-inherit hover:text-accent-foreground not-disabled:active:bg-accent/40',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {

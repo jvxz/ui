@@ -6,7 +6,7 @@ const alertVariants = cva('shadow p-4 border rounded', {
   variants: {
     variant: {
       default: 'text-card-foreground bg-card',
-      destructive: 'border-destructive text-destructive bg-destructive/[2%]',
+      destructive: 'border-destructive text-card-foreground bg-destructive/10',
     },
   },
 })
@@ -14,7 +14,9 @@ function Root({ className, icon, children, variant, ...props }: VariantProps<typ
   return (
     <div
       className={cn(
-        alertVariants({ variant }),
+        alertVariants({
+          variant,
+        }),
         icon && 'flex items-start gap-3 [&>svg]:mt-[4.25px]',
         className)}
       {...props}
@@ -37,7 +39,7 @@ function Title({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
 function Description({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn('text-sm', className)}
+      className={cn('text-sm text-wrap truncate', className)}
       {...props}
     />
   )
