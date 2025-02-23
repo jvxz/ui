@@ -1,20 +1,24 @@
 - [x] Accordion
-- [x] Button
-- [x] Card
-- [x] Checkbox
-- [x] Data Table
-- [x] Dropdown Menu
-- [x] Modal
-- [x] Switch
-- [x] Table
 - [x] Alert
 - [x] Avatar
 - [x] Badge
 - [x] Breadcrumb
-- [ ] Calendar
+- [x] Button
+- [x] Card
 - [x] Carousel (needs work)
-- [ ] Chart
+- [x] Checkbox
 - [x] Collapsible
+- [x] Data Table
+- [x] Dropdown Menu
+- [x] Modal
+- [x] Skeleton
+- [x] Sonner
+- [x] Switch
+- [x] Table
+- [x] Tabs
+- [x] Toast
+- [ ] Calendar
+- [ ] Chart
 - [ ] Combobox
 - [ ] Command
 - [ ] Context Menu
@@ -37,12 +41,8 @@
 - [ ] Separator
 - [ ] Sheet
 - [ ] Sidebar
-- [x] Skeleton
 - [ ] Slider
-- [ ] Sonner
-- [x] Tabs
 - [ ] Textarea
-- [ ] Toast
 - [ ] Toggle
 - [ ] Toggle Group
 - [ ] Tooltip
