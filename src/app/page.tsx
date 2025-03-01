@@ -1,38 +1,23 @@
 'use client'
-import type { ButtonProps } from '@/components/ui/button'
 import { Button } from '@/components/ui/button'
-import { Icon } from '@iconify/react'
-
-const size: ButtonProps['size'] = 'default'
-const disabled = false
+import { Accordion } from '@/components/ui-old/accordion'
 
 export default function Page() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="flex flex-col justify-center items-center gap-4">
-        <Button
-          variant="default"
-          size={size}
+      <div className="space-y-2">
+        <Button>Button</Button>
+        <Accordion.Root
+          type="single"
+          collapsible
         >
-          Primary
-          <Icon icon="mdi:arrow-right" />
-        </Button>
-        <Button
-          variant="outline"
-          size={size}
-          disabled={disabled}
-        >
-          Outline
-        </Button>
-        <Button variant="ghost" size={size} disabled={disabled}>
-          Ghost
-        </Button>
-        <Button variant="destructive" size={size} disabled={disabled}>
-          Destructive
-        </Button>
-        <Button variant="link" size={size} disabled={disabled}>
-          Link
-        </Button>
+          <Accordion.Item value="item-1">
+            <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+            <Accordion.Content>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion.Root>
       </div>
     </div>
   )

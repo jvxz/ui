@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { Toaster as ToasterPrimitive } from 'sonner'
 import type { ToasterProps } from 'sonner'
 
-import { buttonVariants } from './button'
+import { buttonVariants } from '../ui/button'
 import { cn } from '@/lib/utils'
 
 function Toaster({ ...props }: ToasterProps) {

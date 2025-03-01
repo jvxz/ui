@@ -3,7 +3,7 @@ import * as ModalPrimitive from '@radix-ui/react-alert-dialog'
 import { cva } from 'class-variance-authority'
 import type { HTMLAttributes } from 'react'
 
-import { Button } from './button'
+import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
 
 const contentClass = cva('z-50 fixed inset-0 bg-card m-auto motion-preset-slide-up-sm p-5 border rounded w-[90vw] max-w-[500px] h-fit max-h-[85vh] text-muted-foreground motion-duration-125 motion-ease-out motion-preset-fade')
