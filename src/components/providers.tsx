@@ -1,11 +1,11 @@
 'use client'
 import dynamic from 'next/dynamic'
-import { type ThemeProviderProps } from 'next-themes'
+import type { ThemeProviderProps } from 'next-themes'
 
 import { Toaster } from './ui/toast'
 
 const NextThemesProvider = dynamic(
-  () => import('next-themes').then(e => e.ThemeProvider),
+  async () => import('next-themes').then(e => e.ThemeProvider),
   {
     ssr: false,
   },
@@ -13,7 +13,12 @@ const NextThemesProvider = dynamic(
 
 function Providers({ children, ...props }: ThemeProviderProps) {
   return (
-    <NextThemesProvider {...props}>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      {...props}
+    >
       {children}
       <Toaster />
     </NextThemesProvider>
