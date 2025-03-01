@@ -8,7 +8,10 @@ function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
-    <Button size="icon" onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
+    <Button
+      size="icon"
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+    >
       <Icon icon={resolvedTheme === 'dark' ? 'ph:sun-fill' : 'ph:moon-stars-fill'} />
     </Button>
   )

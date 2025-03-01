@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react'
 import * as ModalPrimitive from '@radix-ui/react-alert-dialog'
 import { cva } from 'class-variance-authority'
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
 import { Button } from './button'
 import { cn } from '@/lib/utils'
@@ -27,7 +27,7 @@ function Content({ className, children, ref, closeBtn = true, ...props }: ModalP
               variant="ghost"
               size="icon"
               className="top-3 right-3 absolute rounded-full size-5"
-              >
+            >
               <Icon icon="ph:x" />
             </Button>
           </ModalPrimitive.Action>

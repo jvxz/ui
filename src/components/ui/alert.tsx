@@ -1,4 +1,5 @@
-import { cva, VariantProps } from 'class-variance-authority'
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
 
@@ -18,7 +19,8 @@ function Root({ className, icon, children, variant, ...props }: VariantProps<typ
           variant,
         }),
         icon && 'flex items-start gap-3 [&>svg]:mt-[4.25px]',
-        className)}
+        className,
+      )}
       {...props}
     >
       {icon}

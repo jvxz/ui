@@ -16,7 +16,8 @@ function Content({ sideOffset = 6, ref, ...props }: DropdownMenuPrimitive.Dropdo
       ref={ref}
       className={cn(
         contentClasses,
-        props.className)}
+        props.className,
+      )}
       sideOffset={sideOffset}
       {...props}
     />
@@ -35,7 +36,8 @@ function Item({ ref, ...props }: DropdownMenuPrimitive.DropdownMenuItemProps & {
       ref={ref}
       className={cn(
         itemClasses,
-        props.className)}
+        props.className,
+      )}
       {...props}
     />
   )
@@ -50,7 +52,8 @@ function Label({ ref, ...props }: DropdownMenuPrimitive.DropdownMenuLabelProps &
       ref={ref}
       className={cn(
         labelClasses,
-        props.className)}
+        props.className,
+      )}
       {...props}
     />
   )
@@ -96,7 +99,8 @@ function Separator({ ref, ...props }: DropdownMenuPrimitive.DropdownMenuSeparato
       ref={ref}
       className={cn(
         separatorClasses,
-        props.className)}
+        props.className,
+      )}
       {...props}
     />
   )
@@ -125,7 +129,8 @@ function SubTrigger({ children, ref, ...props }: { children: React.ReactNode, re
       className={cn(
         subTriggerClasses,
         itemClasses,
-        props.className)}
+        props.className,
+      )}
       {...props}
     >
       {children}

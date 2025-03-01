@@ -10,7 +10,7 @@ function Checkbox({ className, ...props }: CheckboxPrimitive.CheckboxProps) {
     <CheckboxPrimitive.Root
       className={cn(checkboxClass(), className)}
       {...props}
-      >
+    >
       <CheckboxPrimitive.Indicator className="place-items-center grid">
         <Icon icon="ph:check-bold" />
       </CheckboxPrimitive.Indicator>

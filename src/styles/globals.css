@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin 'tailwindcss-radix';
 @plugin 'tailwindcss-motion';
 
@@ -7,8 +7,8 @@
 @custom-variant dark (&:is(.dark *));
 @theme {
   --font-sans:
-    var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    var(--font-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 
   --text-xs: calc(var(--text-base) * 0.75);
   --text-sm: calc(var(--text-base) * 0.875);
@@ -98,7 +98,6 @@
   }
 }
 
-
 @layer base {
   *,
   ::after,
@@ -113,10 +112,10 @@
   .accordion-content {
     overflow: hidden;
   }
-  .accordion-content[data-state="open"] {
+  .accordion-content[data-state='open'] {
     animation: slideDown 100ms ease-out;
   }
-  .accordion-content[data-state="closed"] {
+  .accordion-content[data-state='closed'] {
     animation: slideUp 100ms ease-out;
   }
 

@@ -16,7 +16,8 @@ function Header({ className, borderX = true, ...props }: React.TableHTMLAttribut
         'border-b bg-accent/20 font-medium text-muted-foreground',
         '*:hover:bg-accent/40 *:transition-all *:duration-100',
         borderX && '*:not-first:border-l',
-        className)}
+        className,
+      )}
       {...props}
     />
   )
@@ -27,7 +28,8 @@ function Body({ className, borderY = true, ...props }: React.TableHTMLAttributes
     <tbody
       className={cn(
         borderY && '*:not-last:border-b',
-        className)}
+        className,
+      )}
       {...props}
     />
   )
@@ -39,7 +41,8 @@ function Row({ className, borderX = true, ...props }: React.TableHTMLAttributes<
       className={cn(
         'hover:bg-accent/20 transition-all duration-100',
         borderX && '*:not-first:border-l',
-        className)}
+        className,
+      )}
       {...props}
     />
   )
@@ -50,7 +53,8 @@ function Cell({ className, ...props }: React.TableHTMLAttributes<HTMLTableCellEl
     <td
       className={cn(
         'p-3 py-2 select-none',
-        className)}
+        className,
+      )}
       {...props}
     />
   )

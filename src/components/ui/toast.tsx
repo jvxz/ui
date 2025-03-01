@@ -2,12 +2,13 @@
 
 import { Icon } from '@iconify/react'
 import { useTheme } from 'next-themes'
-import { Toaster as ToasterPrimitive, type ToasterProps } from 'sonner'
+import { Toaster as ToasterPrimitive } from 'sonner'
+import type { ToasterProps } from 'sonner'
 
 import { buttonVariants } from './button'
 import { cn } from '@/lib/utils'
 
-const Toaster = ({ ...props }: ToasterProps) => {
+function Toaster({ ...props }: ToasterProps) {
   const { theme = 'system' } = useTheme()
   return (
     <ToasterPrimitive

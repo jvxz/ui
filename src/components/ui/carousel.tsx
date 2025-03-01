@@ -1,6 +1,8 @@
 import { cva } from 'class-variance-authority'
-import useEmblaCarousel, { UseEmblaCarouselType } from 'embla-carousel-react'
-import { ComponentPropsWithoutRef, createContext, HTMLAttributes, use, useCallback, useEffect, useMemo, useState } from 'react'
+import type { UseEmblaCarouselType } from 'embla-carousel-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import type { ComponentPropsWithoutRef, HTMLAttributes } from 'react'
+import { createContext, use, useCallback, useEffect, useMemo, useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -21,7 +23,7 @@ type CarouselContextProps = {
 
 const CarouselContext = createContext<CarouselContextProps | null>(null)
 
-const useCarousel = () => {
+function useCarousel() {
   const context = use(CarouselContext)
   if (!context) {
     throw new Error('This hook must be used inside <Carousel.Root />')
@@ -29,7 +31,7 @@ const useCarousel = () => {
   return context
 }
 
-type RootProps = {
+interface RootProps {
   CarouselContent?: typeof Carousel.Root
   CarouselHandler?: typeof Carousel.Container
   CarouselItem?: typeof Carousel.Slide
