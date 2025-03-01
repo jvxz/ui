@@ -1,22 +1,22 @@
-- [x] Accordion
-- [x] Alert
-- [x] Avatar
-- [x] Badge
-- [x] Breadcrumb
+- [ ] Accordion
+- [ ] Alert
+- [ ] Avatar
+- [ ] Badge
+- [ ] Breadcrumb
 - [x] Button
-- [x] Card
-- [x] Carousel (needs work)
-- [x] Checkbox
-- [x] Collapsible
-- [x] Data Table
-- [x] Dropdown Menu
-- [x] Modal
-- [x] Skeleton
-- [x] Sonner
-- [x] Switch
-- [x] Table
-- [x] Tabs
-- [x] Toast
+- [ ] Card
+- [ ] Carousel
+- [ ] Checkbox
+- [ ] Collapsible
+- [ ] Data Table
+- [ ] Dropdown Menu
+- [ ] Modal
+- [ ] Skeleton
+- [ ] Sonner
+- [ ] Switch
+- [ ] Table
+- [ ] Tabs
+- [ ] Toast
 - [ ] Calendar
 - [ ] Chart
 - [ ] Combobox
