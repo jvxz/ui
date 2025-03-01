@@ -1,17 +1,22 @@
-import { ThemeProvider } from 'next-themes'
+'use client'
+import dynamic from 'next/dynamic'
+import { type ThemeProviderProps } from 'next-themes'
 
-import { Toaster } from '@/components/ui/toast'
+import { Toaster } from './ui/toast'
 
-function Providers({ children }: { children: React.ReactNode }) {
+const NextThemesProvider = dynamic(
+  () => import('next-themes').then(e => e.ThemeProvider),
+  {
+    ssr: false,
+  },
+)
+
+function Providers({ children, ...props }: ThemeProviderProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-    >
+    <NextThemesProvider {...props}>
       {children}
       <Toaster />
-    </ThemeProvider>
+    </NextThemesProvider>
   )
 }
 

@@ -8,7 +8,10 @@ import { ThemeToggle } from '@/components/theme-toggle'
 export const metadata: Metadata = {
   title: 'ui-kit',
   description: 'personal ui kit',
-  icons: [{ rel: 'icon', url: 'https://github.com/jvxz.png' }],
+  icons: [{
+    rel: 'icon',
+    url: 'https://github.com/jvxz.png',
+  }],
 }
 
 const font = IBM_Plex_Sans({
@@ -17,19 +20,20 @@ const font = IBM_Plex_Sans({
   variable: '--font-sans',
 })
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${font.variable}`}>
-      <Providers>
-        <body>
+    <html
+      lang="en"
+      className={`${font.variable}`}
+    >
+      <body>
+        <Providers>
           <div className="top-4 right-4 fixed">
             <ThemeToggle />
           </div>
           {children}
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   )
 }
