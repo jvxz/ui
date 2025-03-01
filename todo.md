@@ -1,5 +1,5 @@
 - [x] Accordion
-- [ ] Alert
+- [x] Alert
 - [ ] Avatar
 - [ ] Badge
 - [ ] Breadcrumb
