@@ -1,4 +1,4 @@
-- [ ] Accordion
+- [x] Accordion
 - [ ] Alert
 - [ ] Avatar
 - [ ] Badge
