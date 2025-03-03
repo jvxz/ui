@@ -12,6 +12,7 @@ function Root({
 }) {
   return (
     <AvatarPrimitive
+      data-slot="avatar"
       className={cn(
         'rounded-full select-none size-10 border group place-items-center grid',
         square && 'rounded-sm',
@@ -53,7 +54,7 @@ function Fallback({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn('[grid-area:1/1] col-span-1 row-span-1 -z-10', className)}
+      className={cn('[grid-area:1/1]  col-span-1 row-span-1 -z-10', className)}
       {...props}
     />
   )

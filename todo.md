@@ -1,6 +1,6 @@
 - [x] Accordion
 - [x] Alert
-- [ ] Avatar
+- [x] Avatar
 - [ ] Badge
 - [ ] Breadcrumb
 - [x] Button
