@@ -4,7 +4,7 @@
 - [x] Badge
 - [ ] Breadcrumb
 - [x] Button
-- [ ] Card
+- [x] Card
 - [ ] Carousel
 - [ ] Checkbox
 - [ ] Collapsible
