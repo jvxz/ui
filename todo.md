@@ -2,7 +2,7 @@
 - [x] Alert
 - [x] Avatar
 - [x] Badge
-- [ ] Breadcrumb
+- [x] Breadcrumb
 - [x] Button
 - [x] Card
 - [ ] Carousel
