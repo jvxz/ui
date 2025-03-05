@@ -9,7 +9,7 @@
 - [x] Checkbox
 - [x] Collapsible
 - [x] Data Table
-- [ ] Dropdown Menu
+- [x] Dropdown Menu
 - [ ] Modal
 - [ ] Skeleton
 - [ ] Sonner
