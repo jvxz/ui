@@ -1,10 +1,10 @@
-import { cva } from 'class-variance-authority'
 import type { UseEmblaCarouselType } from 'embla-carousel-react'
-import useEmblaCarousel from 'embla-carousel-react'
 import type { ComponentPropsWithoutRef, HTMLAttributes } from 'react'
-import { createContext, use, useCallback, useEffect, useMemo, useState } from 'react'
-
 import { cn } from '@/lib/utils'
+import { cva } from 'class-variance-authority'
+import useEmblaCarousel from 'embla-carousel-react'
+
+import { createContext, use, useCallback, useEffect, useMemo, useState } from 'react'
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -34,7 +34,7 @@ function useCarousel() {
 interface RootProps {
   CarouselContent?: typeof Carousel.Root
   CarouselHandler?: typeof Carousel.Container
-  CarouselItem?: typeof Carousel.Slide
+  CarouselItem?: typeof Carousel.Item
   // CarouselButton?: typeof Carousel.Button
 }
 
@@ -81,9 +81,7 @@ function Root({
   const onSelect = useCallback((api: CarouselApi) => {
     if (!api) return
 
-    // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
     setCanScrollPrev(api.canScrollPrev())
-    // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
     setCanScrollNext(api.canScrollNext())
   }, [])
 
@@ -169,6 +167,7 @@ function Container({ ...props }: ComponentPropsWithoutRef<'div'>) {
   return (
     <div
       ref={carouselRef}
+      data-slot="carousel-container"
       id="embla-container"
       className={cn(
         containerVariants({
@@ -181,7 +180,7 @@ function Container({ ...props }: ComponentPropsWithoutRef<'div'>) {
   )
 }
 
-const slideVariants = cva('group relative pl-2 data-focus-visible:outline-hidden data-focused:outline-hidden grow-0 min-w-0 shrink-0 basis-full', {
+const itemVariants = cva('group relative pl-2 data-focus-visible:outline-hidden data-focused:outline-hidden grow-0 min-w-0 shrink-0 basis-full', {
   variants: {
     orientation: {
       vertical: 'pt-2',
@@ -189,17 +188,15 @@ const slideVariants = cva('group relative pl-2 data-focus-visible:outline-hidden
     },
   },
 })
-function Slide({ ...props }: ComponentPropsWithoutRef<'div'>) {
+function Item({ ...props }: ComponentPropsWithoutRef<'div'>) {
   const { orientation } = useCarousel()
 
   return (
     <div
       id="embla-slide"
-      className={cn(
-        slideVariants({
-          orientation,
-        }),
-      )}
+      className={cn(itemVariants({
+        orientation,
+      }))}
     >
       <div
         {...props}
@@ -212,5 +209,5 @@ function Slide({ ...props }: ComponentPropsWithoutRef<'div'>) {
 export const Carousel = {
   Root,
   Container,
-  Slide,
+  Item,
 }

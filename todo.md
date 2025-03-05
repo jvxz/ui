@@ -5,7 +5,7 @@
 - [x] Breadcrumb
 - [x] Button
 - [x] Card
-- [ ] Carousel
+- [x] Carousel
 - [ ] Checkbox
 - [ ] Collapsible
 - [ ] Data Table
