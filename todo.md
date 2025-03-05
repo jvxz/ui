@@ -7,14 +7,14 @@
 - [x] Card
 - [x] Carousel
 - [x] Checkbox
-- [ ] Collapsible
-- [ ] Data Table
+- [x] Collapsible
+- [x] Data Table
 - [ ] Dropdown Menu
 - [ ] Modal
 - [ ] Skeleton
 - [ ] Sonner
 - [ ] Switch
-- [ ] Table
+- [x] Table
 - [ ] Tabs
 - [ ] Toast
 - [ ] Calendar
