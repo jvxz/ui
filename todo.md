@@ -6,7 +6,7 @@
 - [x] Button
 - [x] Card
 - [x] Carousel
-- [ ] Checkbox
+- [x] Checkbox
 - [ ] Collapsible
 - [ ] Data Table
 - [ ] Dropdown Menu
