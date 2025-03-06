@@ -10,7 +10,7 @@
 - [x] Collapsible
 - [x] Data Table
 - [x] Dropdown Menu
-- [ ] Modal
+- [x] Modal
 - [ ] Skeleton
 - [ ] Sonner
 - [ ] Switch
