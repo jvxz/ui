@@ -11,7 +11,7 @@
 - [x] Data Table
 - [x] Dropdown Menu
 - [x] Modal
-- [ ] Skeleton
+- [x] Skeleton
 - [ ] Sonner
 - [ ] Switch
 - [x] Table

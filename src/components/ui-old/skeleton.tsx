@@ -1,16 +1,14 @@
-import type { ComponentPropsWithRef } from 'react'
-
+import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
 function Skeleton({
   className,
-  ref,
   ...props
-}: ComponentPropsWithRef<'div'>) {
+}: ComponentProps<'div'>) {
   return (
     <div
-      ref={ref}
-      className={cn('bg-muted w-24 h-8 rounded animate-pulse', className)}
+      data-slot="skeleton"
+      className={cn('bg-muted h-8 w-24 animate-pulse rounded', className)}
       {...props}
     />
   )
